@@ -8,37 +8,44 @@ class ContactCard extends Component{
             mobileNumber: '555-555-5555',
             workPhone: '123-456-7890',
             email: 'elaine@google.com',
-            input: 'DEFAULT VALUE',
+            // input: 'DEFAULT VALUE',
         };
 
-        this.handleInputChange = this.handleInputChange.bind(this);
+        // this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     
-    componentDidMount(){
-        console.log('COMPONENT DID MOUNT');
-    }
+    // componentDidMount(){
+    //     console.log('COMPONENT DID MOUNT');
+    // }
 
-    componentDidUpdate(prevProps, prevState){
-        console.log('COMPONENT UPDATED');
-    }
+    // componentDidUpdate(prevProps, prevState){
+    //     console.log('COMPONENT UPDATED');
+    // }
 
-    handleInputChange(event){
-        this.setState({
-            input: event.target.value
-        });
-    }
+    // handleInputChange(event){
+    //     this.setState({
+    //         input: event.target.value
+    //     });
+    // }
 
     render(){
         return (
-          <div>
-            <h1>Contact Name: {this.state.contactName}</h1>
-            <h2>Mobile Number: {this.state.mobileNumber}</h2>
-            <h2>Work Number: {this.state.workPhone}</h2>
-            <h2>Email: {this.state.email}</h2>
-            <div>
+          <div
+            style={{
+              padding: "15px",
+              alignItems: "center",
+              border: "1px solid black",
+              height: '40vh'
+            }}
+          >
+            <h1>Contact Name: {this.props.contactName}</h1>
+            <h2>Mobile Number: {this.props.mobileNumber}</h2>
+            <h2>Work Number: {this.props.workPhone}</h2>
+            <h2>Email: {this.props.email}</h2>
+            {/* <div>
                 <input onChange={this.handleInputChange} defaultValue={this.state.input} />
-            </div>
+            </div> */}
           </div>
         );
     }
